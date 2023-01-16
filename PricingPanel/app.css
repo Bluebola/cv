@@ -1,0 +1,276 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ABOVE IS THE CSS RESET TO MAKE THE FILE A VERY BLANK STARTING SPOT. */
+
+body {
+    background-color: #60a9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* If you don't enforce the "min-height: 100vh" to the body,
+    the height of the body is exactly the height of the <div class="panel pricing-table"> 
+    (please, inspect that with the Chrome Dev Tools). This way, the div is already centered. 
+    This seems to not make much sense since we see a lot of space under the div, that's why it's important that you inspect it
+    and realize that the height of the body and the height of the <div class="panel pricing-table"> is exactly the same.
+    However, after you add the  "min-height: 100vh" to the body, you are effectively changing the height of the body,
+    making it way higher than the height of the div (depending of the size of your browser window, of course)
+    giving the div that extra space for it to center and move away from the top.
+    By default the html and body elements are only as high as the actual page content. */
+
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    /*this causes the width and height of the total box to also include the width and height of the border */
+
+}
+
+.panel {
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    padding: 20px 25px;
+    flex-direction: column;
+    text-transform: uppercase;
+
+    width: 100%;
+    max-width: 960px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.pricing-img {
+    width: 100%;
+    max-width: 200px;
+    padding: 20px 20px;
+    margin-bottom: 25px;
+}
+
+.pricing-header {
+    color: grey;
+    font-weight: 600;
+    font-size: large;
+    letter-spacing: 1px;
+    padding-bottom: 0;
+}
+
+.pricing-features {
+    margin: 50px 0 25px;
+    color: blue;
+
+}
+
+.pricing-features-item {
+    border-top: 1px solid #e1f1ff;
+    padding: 15px 0;
+    line-height: 1.5;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.pricing-features-item:last-child {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-plan {
+    flex-direction: column;
+    border-bottom: 1px solid #e1f1ff;
+
+}
+
+
+.pricing-price {
+    display: block;
+    /* change display to block to make it be on top of the other */
+    color: #016ff9;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.pricing-button {
+    border: 1px solid #9dd1ff;
+    border-radius: 10px;
+    color: #348efe;
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #9dd1ff;
+    transition: all 0.1s ease-in;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+    background-color: #e1f1ff;
+}
+
+
+.pricing-button.is-featured
+/* selecting the specific class by selecting two classes */
+    {
+    background-color: #48aaff;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+.pricing-button.is-featured:hover {
+    background-color: white;
+    color: #48aaff;
+}
+
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+      
+    }
+
+    ;
+
+    .pricing-plan:last-child {
+        border-right: none;
+    }
+
+}

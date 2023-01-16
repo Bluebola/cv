@@ -1,0 +1,28 @@
+body {
+    margin: 0 auto;
+}
+
+img {
+    width: 30%;
+    margin: 1.666666%;
+}
+
+nav:hover {
+    border-color: aqua;
+}
+
+/* 3 photos, each 30% means there is 10% left of the website empty.
+ (30% means 30% of the parent element which is body.)
+ Margin is added to the left and the right of the element. Can also do
+ margin: calc(10%/6); */
+
+nav {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    margin-left: 1.6666%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    transition: 1s ease-in;
+}
